@@ -28,3 +28,27 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+
+" Git
+
+" View Git status:
+nmap gs :G status<CR>
+
+" Stage all changes:
+nmap gaa :G add --all<CR> 
+
+" Commit changes: 
+nmap gc  :G commit<CR>
+
+" Push changes:
+nmap gp :G push<CR>
+
+" Fetch remote changes:
+nmap gf :G fetch<CR>
+
+" Pull remote changes:
+nmap gP :G pull<CR>
+
+" View diff:
+nmap gd :G diff<CR>
