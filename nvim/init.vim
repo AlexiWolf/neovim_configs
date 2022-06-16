@@ -22,6 +22,7 @@ autocmd BufNewFile,BufRead *.md setlocal colorcolumn=120
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/keybindings.vim
 source ~/.config/nvim/coc.vim
+source ~/.config/nvim/neoterm.vim
 source ~/.config/nvim/vim_test.vim
 source ~/.config/nvim/gutentags.vim
 
