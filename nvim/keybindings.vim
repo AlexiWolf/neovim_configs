@@ -52,3 +52,13 @@ nmap gP :G pull<CR>
 
 " View diff:
 nmap gd :G diff<CR>
+
+
+" Testing
+
+" Run tests:
+nmap <silent> tn :TestNearest<CR>
+nmap <silent> tf :TestFile<CR>
+nmap <silent> ts :TestSuite<CR>
+nmap <silent> tl :TestLast<CR>
+nmap <silent> tg :TestVisit<CR>
