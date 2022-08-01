@@ -16,6 +16,7 @@
       "Calloop",
       "Clippy",
       "Gilrs",
+      "Subcontext",
       "Winit",
       "gamepad",
       "subcontexts"
