@@ -23,6 +23,9 @@ nmap fl <Plug>(easymotion-overwin-line)
 " Jump to definition:
 nmap <silent> fd <Plug>(coc-definition)
 nmap <silent> fD <Plug>(coc-type-definition)
+nmap <silent> fi <Plug>(coc-implementation)
+nmap <silent> fr <Plug>(coc-references)
+
 
 " Window Split Navigation
 
