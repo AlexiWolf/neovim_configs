@@ -7,13 +7,6 @@
     "rust-analyzer.cargo.allFeatures": true,
     "rust-analyzer.checkOnSave.allTargets": true,
 
-    "java.configuration.runtimes": [
-        {
-            "name": "JavaSE-17",
-            "path": "/usr/lib/jvm/java-17-openjdk"
-        }
-    ],
-
     "cSpell.userWords": [
       "Calloop",
       "Clippy",
