@@ -10,6 +10,10 @@ set scrolloff=999
 
 set nowrap
 
+" Pmenu Colors
+
+hi Pmenu ctermbg=16, ctermfg=15
+
 " 80 character line limit by default
 set colorcolumn=80
 
