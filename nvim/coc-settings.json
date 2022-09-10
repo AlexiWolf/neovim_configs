@@ -10,10 +10,16 @@
     "cSpell.userWords": [
       "Calloop",
       "Clippy",
+      "Gameplay",
       "Gilrs",
       "Subcontext",
       "Winit",
       "gamepad",
-      "subcontexts"
+      "laggy",
+      "subcontexts",
+      "tickrate",
+      "tickrates",
+      "timestep",
+      "timesteps"
     ]
 }
