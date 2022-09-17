@@ -3,6 +3,7 @@
     "codeLens.enable": true,
 
     "rust-analyzer.cargo.features": "all",
+    "rust-analyzer.checkOnSave.allTargets": true,
 
     "cSpell.userWords": [
       "Calloop",
