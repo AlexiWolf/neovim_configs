@@ -27,7 +27,6 @@ local goto_keymap = {
     ["cc"] = {"<Plug>(easymotion-overwin-f2)", "easymotion 2-character"},
     
 }
-whichkey.register_keymap("g", goto_keymap)
 
 local git_keymap = {
     name = "Git",
@@ -48,4 +47,4 @@ local leader_keymap = {
     g = git_keymap,
 }
 whichkey.register_keymap("leader", leader_keymap)
-
+whichkey.register_keymap("g", goto_keymap)
