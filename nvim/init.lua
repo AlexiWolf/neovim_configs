@@ -18,3 +18,4 @@ set.wrap = false
 set.colorcolumn = {80}
 
 require("plugins")
+require("keybindings")
