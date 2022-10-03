@@ -57,6 +57,8 @@ local test_runner_keymap = {
 vim.g.mapleader = " "
 local leader_keymap = {
     name = "Leader Actions",
+    f = {":Files<CR>", "open file picker"},
+    s = {":Btags<CR>", "open symbol picker"},
     g = git_keymap,
     t = test_runner_keymap,
 }
