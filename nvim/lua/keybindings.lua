@@ -39,6 +39,7 @@ local git_keymap = {
     L = {":BCommits<CR>", "view commit log for current buffer"},
     a = {":G add --all<CR>", "stage all"},
     c = {":G commit<CR>", "commit"},
+    C = {":G add --all | :G commit<CR>", "stage all and commit"},
     p = {":G push <CR>", "push"},
     P = {":G pull <CR>", "pull"},
     f = {":G fetch<CR>", "fetch"},
