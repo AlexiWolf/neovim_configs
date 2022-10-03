@@ -5,9 +5,9 @@ let mapleader = " "
 " Fuzzy Finding
 
 " Fuzzy Find tags with 'ff':
-nmap <silent>ff :Tags<CR> 
+nmap <silent><leader>f :Tags<CR> 
 " Fuzzy find files with 'FF':
-nmap <silent>FF :FZF<CR>
+nmap <silent><leader>F :FZF<CR>
 
 " Jumps
 
@@ -42,25 +42,25 @@ nmap <silent> <c-l> :wincmd l<CR>
 " Git
 
 " View Git status:
-nmap gs :G status<CR>
+nmap <leader>gs :G status<CR>
 
 " Stage all changes:
-nmap gaa :G add --all<CR> 
+nmap <leader>gaa :G add --all<CR> 
 
 " Commit changes: 
-nmap gc  :G commit<CR>
+nmap <leader>gc  :G commit<CR>
 
 " Push changes:
-nmap gp :G push<CR>
+nmap <leader>gp :G push<CR>
 
 " Fetch remote changes:
-nmap gf :G fetch<CR>
+nmap <leader>gf :G fetch<CR>
 
 " Pull remote changes:
-nmap gP :G pull<CR>
+nmap <leader>gP :G pull<CR>
 
 " View diff:
-nmap gd :G diff<CR>
+nmap <leader>gd :G diff<CR>
 
 
 " Testing
