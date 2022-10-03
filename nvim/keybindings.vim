@@ -12,23 +12,22 @@ nmap <silent><leader>F :FZF<CR>
 " Jumps
 
 " Jump to characters:
-nmap fc <Plug>(easymotion-overwin-f)
-nmap fcc <Plug>(easymotion-overwin-f2)
+nmap gc <Plug>(easymotion-overwin-f)
+nmap gcc <Plug>(easymotion-overwin-f2)
 
 " Jump to word: 
-nmap fw <Plug>(easymotion-overwin-w)
+nmap gw <Plug>(easymotion-overwin-w)
 
 " Jump to lines:
-nmap fj <Plug>(easymotion-j)
-nmap fk <Plug>(easymotion-k)
-nmap fl <Plug>(easymotion-overwin-line)
+nmap gj <Plug>(easymotion-j)
+nmap gk <Plug>(easymotion-k)
+nmap gl <Plug>(easymotion-overwin-line)
 
 " Jump to definition:
-nmap <silent> fd <Plug>(coc-definition)
-nmap <silent> fD <Plug>(coc-type-definition)
-nmap <silent> fi <Plug>(coc-implementation)
-nmap <silent> fr <Plug>(coc-references)
-
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Window Split Navigation
 
@@ -36,8 +35,7 @@ nmap <silent> fr <Plug>(coc-references)
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
-
+map <silent> <c-l> :wincmd l<CR>
 
 " Git
 
@@ -48,7 +46,7 @@ nmap <leader>gs :G status<CR>
 nmap <leader>gaa :G add --all<CR> 
 
 " Commit changes: 
-nmap <leader>gc  :G commit<CR>
+nmap <leader>gc :G commit<CR>
 
 " Push changes:
 nmap <leader>gp :G push<CR>
