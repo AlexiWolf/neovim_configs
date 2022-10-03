@@ -67,5 +67,6 @@ local leader_keymap = {
 }
 
 -- Register Keymaps
+whichkey.register({["<bs>"] = {":WhichKey<CR>", "Show all keybindings"}})
 whichkey.register(leader_keymap, {prefix = "<leader>"})
 whichkey.register(goto_keymap, {prefix = "g"})
