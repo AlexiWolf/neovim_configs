@@ -1,17 +1,13 @@
 local whichkey = require("whichkey_setup")
 local vimkeys = vim.keymap
 
+-- Split Window Navigation With <Ctrl>+[hjkl]
 vimkeys.set("n", "<c-k>", ":wincmd k<CR>", {silent = true})
 vimkeys.set("n", "<c-j>", ":wincmd j<CR>", {silent = true})
 vimkeys.set("n", "<c-h>", ":wincmd h<CR>", {silent = true})
 vimkeys.set("n", "<c-l>", ":wincmd l<CR>", {silent = true})
 
-vim.g.mapleader = " "
-local leader_keymap = {
-    name = "Leader Actions",
-}
-whichkey.register_keymap("leader", leader_keymap)
-
+-- Goto Keybindings
 local goto_keymap = {
     name = "Goto",
 
@@ -32,3 +28,11 @@ local goto_keymap = {
     
 }
 whichkey.register_keymap("g", goto_keymap)
+
+-- Leader Keybindings
+vim.g.mapleader = " "
+local leader_keymap = {
+    name = "Leader Actions",
+}
+whichkey.register_keymap("leader", leader_keymap)
+
