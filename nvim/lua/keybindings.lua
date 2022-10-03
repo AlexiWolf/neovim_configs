@@ -28,6 +28,7 @@ local goto_keymap = {
     
 }
 
+-- Git Keybindings
 local git_keymap = {
     name = "Git",
     s = {":G status<CR>", "view status"},
@@ -40,11 +41,26 @@ local git_keymap = {
     f = {":G fetch<CR>", "fetch"},
 }
 
+
+-- Test Runner Keybindings
+local test_runner_keymap = {
+    name = "Run Tests",
+    n = {":TestNearest<CR>", "run test nearest to cursor"},
+    f = {":TestFile<CR>", "run tests in current file"},
+    s = {":TestSuite<CR>", "run all tests"},
+    l = {":TestLast<CR>", "rerun the last test command"},
+    c = {":TestClass<CR>", "run tests in current class"},
+    v = {":TestVisit<CR>", "open the last test in current buffer"},
+}
+
 -- Leader Keybindings
 vim.g.mapleader = " "
 local leader_keymap = {
     name = "Leader Actions",
     g = git_keymap,
+    t = test_runner_keymap,
 }
+
+-- Register Keymaps
 whichkey.register_keymap("leader", leader_keymap)
 whichkey.register_keymap("g", goto_keymap)
