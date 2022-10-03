@@ -29,10 +29,23 @@ local goto_keymap = {
 }
 whichkey.register_keymap("g", goto_keymap)
 
+local git_keymap = {
+    name = "Git",
+    s = {":G status<CR>", "view status"},
+    d = {":G diff<CR>", "view diff"},
+    l = {":G log<CR>", "view commit log"},
+    a = {":G add --all<CR>", "stage all"},
+    c = {":G commit<CR>", "commit"},
+    p = {":G push <CR>", "push"},
+    P = {":G pull <CR>", "pull"},
+    f = {":G fetch<CR>", "fetch"},
+}
+
 -- Leader Keybindings
 vim.g.mapleader = " "
 local leader_keymap = {
     name = "Leader Actions",
+    g = git_keymap,
 }
 whichkey.register_keymap("leader", leader_keymap)
 
