@@ -4,9 +4,9 @@ let mapleader = " "
 
 " Fuzzy Finding
 
-" Fuzzy Find tags with 'ff':
+" Fuzzy Find tags with '<leader>f':
 nmap <silent><leader>f :Tags<CR> 
-" Fuzzy find files with 'FF':
+" Fuzzy find files with '<leader>F':
 nmap <silent><leader>F :FZF<CR>
 
 " Jumps
