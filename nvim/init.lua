@@ -17,6 +17,8 @@ set.expandtab = true
 set.wrap = false 
 set.colorcolumn = {80}
 
+set.timeoutlen = 500 
+
 vim.cmd("hi Pmenu ctermbg=16, ctermfg=15")
 
 require("plugins")
