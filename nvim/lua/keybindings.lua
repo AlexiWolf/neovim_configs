@@ -1,4 +1,4 @@
-local whichkey = require("whichkey_setup")
+local whichkey = require("which-key")
 local vimkeys = vim.keymap
 
 vim.g["which_key_vertical"] = 1
@@ -66,5 +66,5 @@ local leader_keymap = {
 }
 
 -- Register Keymaps
-whichkey.register_keymap("leader", leader_keymap)
-whichkey.register_keymap("g", goto_keymap)
+whichkey.register(leader_keymap, {prefix = "<leader>"})
+whichkey.register(goto_keymap, {prefix = "g"})

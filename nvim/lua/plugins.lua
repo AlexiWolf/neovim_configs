@@ -3,12 +3,11 @@ local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 
 Plug("easymotion/vim-easymotion")
+Plug("folke/which-key.nvim")
 Plug("gpanders/editorconfig.nvim")
 Plug("itchyny/lightline.vim")
 Plug("junegunn/fzf.vim")
 Plug("kassio/neoterm")
-Plug("liuchengxu/vim-which-key")
-Plug("AckslD/nvim-whichkey-setup.lua")
 Plug("ludovicchabant/vim-gutentags")
 Plug("neoclide/coc.nvim", {branch = "release"})
 Plug("tpope/vim-fugitive")
