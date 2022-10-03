@@ -1,10 +1,13 @@
+" Set Leader Key
+nnoremap <space> <nop>
+let mapleader = " "
+
 " Fuzzy Finding
 
 " Fuzzy Find tags with 'ff':
 nmap <silent>ff :Tags<CR> 
 " Fuzzy find files with 'FF':
 nmap <silent>FF :FZF<CR>
-
 
 " Jumps
 
