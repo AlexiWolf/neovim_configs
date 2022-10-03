@@ -17,3 +17,4 @@ set.expandtab = true
 set.wrap = false 
 set.colorcolumn = {80}
 
+require("plugins")
