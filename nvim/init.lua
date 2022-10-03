@@ -1,4 +1,5 @@
 local set = vim.opt
+
 set.compatible = false 
 set.errorbells = false 
 
@@ -15,3 +16,4 @@ set.expandtab = true
 
 set.wrap = false 
 set.colorcolumn = {80}
+
