@@ -20,4 +20,5 @@ set.colorcolumn = {80}
 vim.cmd("hi Pmenu ctermbg=16, ctermfg=15")
 
 require("plugins")
+require("whichkey")
 require("keybindings")
