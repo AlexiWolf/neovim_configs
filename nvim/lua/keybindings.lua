@@ -1,6 +1,8 @@
 local whichkey = require("whichkey_setup")
 local vimkeys = vim.keymap
 
+vim.g["which_key_vertical"] = 1
+
 -- Split Window Navigation With <Ctrl>+[hjkl]
 vimkeys.set("n", "<c-k>", ":wincmd k<CR>", {silent = true})
 vimkeys.set("n", "<c-j>", ":wincmd j<CR>", {silent = true})
@@ -58,7 +60,7 @@ vim.g.mapleader = " "
 local leader_keymap = {
     name = "Leader Actions",
     f = {":Files<CR>", "open file picker"},
-    s = {":Btags<CR>", "open symbol picker"},
+    s = {":BTags<CR>", "open symbol picker"},
     g = git_keymap,
     t = test_runner_keymap,
 }
