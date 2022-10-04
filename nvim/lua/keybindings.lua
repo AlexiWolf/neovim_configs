@@ -2,10 +2,10 @@ local whichkey = require("which-key")
 local vimkeys = vim.keymap
 
 -- Split Window Navigation With <Ctrl>+[hjkl]
-vimkeys.set("n", "<c-k>", ":wincmd k<CR>", {silent = true})
-vimkeys.set("n", "<c-j>", ":wincmd j<CR>", {silent = true})
-vimkeys.set("n", "<c-h>", ":wincmd h<CR>", {silent = true})
-vimkeys.set("n", "<c-l>", ":wincmd l<CR>", {silent = true})
+vimkeys.set("n", "<c-k>", ":wincmd k<cr>", {silent = true})
+vimkeys.set("n", "<c-j>", ":wincmd j<cr>", {silent = true})
+vimkeys.set("n", "<c-h>", ":wincmd h<cr>", {silent = true})
+vimkeys.set("n", "<c-l>", ":wincmd l<cr>", {silent = true})
 
 -- Goto Keybindings
 local goto_keymap = {
@@ -31,27 +31,27 @@ local goto_keymap = {
 -- Git Keybindings
 local git_keymap = {
     name = "Git",
-    s = {":G status<CR>", "view status"},
-    d = {":G diff<CR>", "view diff"},
-    l = {":Commits<CR>", "view commit log"},
-    L = {":BCommits<CR>", "view commit log for current buffer"},
-    a = {":G add --all<CR>", "stage all"},
-    c = {":G commit<CR>", "commit"},
-    C = {":G add --all | :G commit<CR>", "stage all and commit"},
-    p = {":G push <CR>", "push"},
-    P = {":G pull <CR>", "pull"},
-    f = {":G fetch<CR>", "fetch"},
+    s = {":G status<cr>", "view status"},
+    d = {":G diff<cr>", "view diff"},
+    l = {":Commits<cr>", "view commit log"},
+    L = {":BCommits<cr>", "view commit log for current buffer"},
+    a = {":G add --all<cr>", "stage all"},
+    c = {":G commit<cr>", "commit"},
+    C = {":G add --all | :G commit<cr>", "stage all and commit"},
+    p = {":G push <cr>", "push"},
+    P = {":G pull <cr>", "pull"},
+    f = {":G fetch<cr>", "fetch"},
 }
 
 -- Test Runner Keybindings
 local test_runner_keymap = {
     name = "Run Tests",
-    n = {":TestNearest<CR>", "run test nearest to cursor"},
-    f = {":TestFile<CR>", "run tests in current file"},
-    s = {":TestSuite<CR>", "run all tests"},
-    l = {":TestLast<CR>", "rerun the last test command"},
-    c = {":TestClass<CR>", "run tests in current class"},
-    v = {":TestVisit<CR>", "open the last test in current buffer"},
+    n = {":TestNearest<cr>", "run test nearest to cursor"},
+    f = {":TestFile<cr>", "run tests in current file"},
+    s = {":TestSuite<cr>", "run all tests"},
+    l = {":TestLast<cr>", "rerun the last test command"},
+    c = {":TestClass<cr>", "run tests in current class"},
+    v = {":TestVisit<cr>", "open the last test in current buffer"},
 }
 
 local terminal_keymap = {
@@ -66,8 +66,8 @@ local terminal_keymap = {
 vim.g.mapleader = " "
 local leader_keymap = {
     name = "Leader Actions",
-    f = {":Files<CR>", "open file picker"},
-    s = {":BTags<CR>", "open symbol picker"},
+    f = {":Files<cr>", "open file picker"},
+    s = {":BTags<cr>", "open symbol picker"},
     S = {":Tags<cr>", "Open workspace symbol picker"},
     g = git_keymap,
     t = test_runner_keymap,
@@ -75,6 +75,6 @@ local leader_keymap = {
 }
 
 -- Register Keymaps
-whichkey.register({["<bs>"] = {":WhichKey<CR>", "Show all keybindings"}})
+whichkey.register({["<bs>"] = {":WhichKey<cr>", "Show all keybindings"}})
 whichkey.register(leader_keymap, {prefix = "<leader>"})
 whichkey.register(goto_keymap, {prefix = "g"})
