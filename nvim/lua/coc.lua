@@ -51,8 +51,3 @@ function _G.show_docs()
         api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
     end
 end
-
-function _G.check_back_space()
-    local col = fn.col('.') - 1
-    return col == 0 or fn.getline('.'):sub(col, col):match('%s')
-end

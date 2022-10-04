@@ -60,17 +60,25 @@ local terminal_keymap = {
 
 -- LSP Insert Mode Bindings
 
--- Code Completion.
-local opts = {silent = true, noremap = true, expr = true}
-vimkeys.set("i", "<tab>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
-vimkeys.set("i", "<s-tab>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<c-h>"]], opts)
+-- Using Vimscript because Lua bindings don't seem to work correctly.
+vim.cmd [[
+    " Use tab for trigger completion with characters ahead and navigate.
+    inoremap <silent><expr> <TAB>
+          \ coc#pum#visible() ? coc#pum#next(1):
+          \ CheckBackspace() ? "\<Tab>" :
+          \ coc#refresh()
+    inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
--- Make <CR> to accept selected completion item or notify coc.nvim to format
--- <C-g>u breaks current undo, please make your own choice.
-vimkeys.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<c-g>u\<cr>\<c-r>=coc#on_enter()\<cw>"]], opts)
+    " Make <CR> to accept selected completion item or notify coc.nvim to format
+    " <C-g>u breaks current undo, please make your own choice.
+    inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                                  \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
--- Use <c-space> to trigger completion.
-vimkeys.set("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
+    function! CheckBackspace() abort
+      let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+]]
 
 -- Leader Keybindings
 vim.g.mapleader = " "
