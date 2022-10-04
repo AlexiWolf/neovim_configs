@@ -1,8 +1,6 @@
 local whichkey = require("which-key")
 local vimkeys = vim.keymap
 
-vim.g["which_key_vertical"] = 1
-
 -- Split Window Navigation With <Ctrl>+[hjkl]
 vimkeys.set("n", "<c-k>", ":wincmd k<CR>", {silent = true})
 vimkeys.set("n", "<c-j>", ":wincmd j<CR>", {silent = true})
