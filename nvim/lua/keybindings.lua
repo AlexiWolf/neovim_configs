@@ -24,7 +24,7 @@ local goto_keymap = {
     l = {"<Plug>(easymotion-overwin-line)", "easymotion line"},
     w = {"<Plug>(easymotion-overwin-w)", "easymotion word"},
     c = {"<Plug>(easymotion-overwin-f)", "easymotion character"},
-    ["cc"] = {"<Plug>(easymotion-overwin-f2)", "easymotion 2-character"},
+    C = {"<Plug>(easymotion-overwin-f2)", "easymotion 2-character"},
     
 }
 
