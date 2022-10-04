@@ -62,12 +62,12 @@ local terminal_keymap = {
 
 -- Code Completion.
 local opts = {silent = true, noremap = true, expr = true}
-vimkeys.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
-vimkeys.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
+vimkeys.set("i", "<tab>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+vimkeys.set("i", "<s-tab>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<c-h>"]], opts)
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice.
-vimkeys.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+vimkeys.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<c-g>u\<cr>\<c-r>=coc#on_enter()\<cw>"]], opts)
 
 -- Use <c-space> to trigger completion.
 vimkeys.set("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
