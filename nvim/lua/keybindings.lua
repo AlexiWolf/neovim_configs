@@ -68,6 +68,7 @@ local leader_keymap = {
     name = "Leader Actions",
     f = {":Files<CR>", "open file picker"},
     s = {":BTags<CR>", "open symbol picker"},
+    S = {":Tags<cr>", "Open workspace symbol picker"},
     g = git_keymap,
     t = test_runner_keymap,
     T = terminal_keymap,
