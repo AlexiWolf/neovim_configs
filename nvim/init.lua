@@ -23,4 +23,6 @@ vim.cmd("hi Pmenu ctermbg=16, ctermfg=15")
 
 require("plugins")
 require("whichkey")
+require("coc")
 require("keybindings")
+
