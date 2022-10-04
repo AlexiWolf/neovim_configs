@@ -45,7 +45,6 @@ local git_keymap = {
     f = {":G fetch<CR>", "fetch"},
 }
 
-
 -- Test Runner Keybindings
 local test_runner_keymap = {
     name = "Run Tests",
@@ -57,6 +56,14 @@ local test_runner_keymap = {
     v = {":TestVisit<CR>", "open the last test in current buffer"},
 }
 
+local terminal_keymap = {
+    name = "Terminal",
+    t = {":Ttoggle<cr>", "Toggle the terminal"},
+    T = {":TtoggleAll<cr>", "Toggle all terminals"},
+    c = {":Tclose<cr>", "Close the terminal"},
+    C = {":TcloseAll<cr>", "Close all terminals"},
+}
+
 -- Leader Keybindings
 vim.g.mapleader = " "
 local leader_keymap = {
@@ -65,6 +72,7 @@ local leader_keymap = {
     s = {":BTags<CR>", "open symbol picker"},
     g = git_keymap,
     t = test_runner_keymap,
+    T = termianl_keymap,
 }
 
 -- Register Keymaps
