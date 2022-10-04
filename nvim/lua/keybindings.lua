@@ -11,9 +11,6 @@ vimkeys.set("n", "<c-l>", ":wincmd l<cr>", {silent = true})
 local goto_keymap = {
     name = "Goto",
 
-    -- Default Gotos
-    g = {"gg", "top of file"},
-    
     -- LSP Gotos
     d = {"<Plug>(coc-definition)", "LSP symbol definition"},
     D = {"<Plug>(coc-type-definition)", "LSP type definition"},
