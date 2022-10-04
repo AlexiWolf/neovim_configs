@@ -72,7 +72,7 @@ local leader_keymap = {
     s = {":BTags<CR>", "open symbol picker"},
     g = git_keymap,
     t = test_runner_keymap,
-    T = termianl_keymap,
+    T = terminal_keymap,
 }
 
 -- Register Keymaps
