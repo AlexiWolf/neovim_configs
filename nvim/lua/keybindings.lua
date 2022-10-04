@@ -22,7 +22,6 @@ local goto_keymap = {
     w = {"<Plug>(easymotion-overwin-w)", "easymotion word"},
     c = {"<Plug>(easymotion-overwin-f)", "easymotion character"},
     C = {"<Plug>(easymotion-overwin-f2)", "easymotion 2-character"},
-    
 }
 
 -- Git Keybindings
@@ -58,6 +57,20 @@ local terminal_keymap = {
     c = {":Tclose<cr>", "Close the terminal"},
     C = {":TcloseAll<cr>", "Close all terminals"},
 }
+
+-- LSP Insert Mode Bindings
+
+-- Code Completion.
+local opts = {silent = true, noremap = true, expr = true}
+vimkeys.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+vimkeys.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
+
+-- Make <CR> to accept selected completion item or notify coc.nvim to format
+-- <C-g>u breaks current undo, please make your own choice.
+vimkeys.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+
+-- Use <c-space> to trigger completion.
+vimkeys.set("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
 
 -- Leader Keybindings
 vim.g.mapleader = " "
