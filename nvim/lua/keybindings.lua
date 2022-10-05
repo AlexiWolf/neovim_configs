@@ -16,7 +16,7 @@ local goto_keymap = {
     D = {"<Plug>(coc-type-definition)", "LSP type definition"},
     i = {"<Plug>(coc-implementation)", "LSP implementations"},
     r = {"<Plug>(coc-references)", "LSP references"},
-    
+
     -- Easymotion Gotos
     l = {"<Plug>(easymotion-overwin-line)", "easymotion line"},
     w = {"<Plug>(easymotion-overwin-w)", "easymotion word"},
@@ -58,7 +58,7 @@ local terminal_keymap = {
     C = {":TcloseAll<cr>", "Close all terminals"},
 }
 
--- LSP Insert Mode Bindings
+-- LSP Bindings
 
 -- Using Vimscript because Lua bindings don't seem to work correctly.
 vim.cmd [[
@@ -84,15 +84,23 @@ vim.cmd [[
 vim.g.mapleader = " "
 local leader_keymap = {
     name = "Leader Actions",
+
     f = {":Files<cr>", "open file picker"},
     s = {":BTags<cr>", "open symbol picker"},
     S = {":Tags<cr>", "Open workspace symbol picker"},
     g = git_keymap,
     t = test_runner_keymap,
     T = terminal_keymap,
+
+    -- LSP Leader Bindings
+    r = {"<Plug>(coc-rename)", "Rename Symbol"},
+    a = {"<Plug>(coc-codeaction-selected)<cr>", "Apply code action to selection"},
+    A = {"<Plug>(coc-fix-current)", "Autofix problem on current line"},
+    c = {"<Plug>(coc-codelens-action)", "Run codelens action on selected line"},
+    k = {":lua=_G.show_docs()<cr>", "Show Documentation for selected symbol"},
 }
 
 -- Register Keymaps
 whichkey.register({["<bs>"] = {":WhichKey<cr>", "Show all keybindings"}})
-whichkey.register(leader_keymap, {prefix = "<leader>"})
+whichkey.register(leader_keymap, {prefix = "<leader>", silent = true})
 whichkey.register(goto_keymap, {prefix = "g"})
