@@ -1,0 +1,7 @@
+{
+    "suggest.noselect": true,
+    "codeLens.enable": true,
+    
+    "rust-analyzer.cargo.allFeatures": true,
+    "rust-analyzer.checkOnSave.allTargets": true
+}
