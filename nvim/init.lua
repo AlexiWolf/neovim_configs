@@ -26,4 +26,4 @@ require("whichkey")
 require("coc")
 require("keybindings")
 require("neoterm")
-
+require("vim_test")
