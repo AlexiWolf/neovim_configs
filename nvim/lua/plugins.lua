@@ -3,6 +3,7 @@ local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 
 Plug("easymotion/vim-easymotion")
+Plug("EdenEast/nightfox.nvim")
 Plug("folke/which-key.nvim")
 Plug("gpanders/editorconfig.nvim")
 Plug("itchyny/lightline.vim")

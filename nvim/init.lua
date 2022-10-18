@@ -19,8 +19,6 @@ set.colorcolumn = {80}
 
 set.timeoutlen = 1000 
 
-vim.cmd("hi Pmenu ctermbg=16, ctermfg=15")
-
 require("plugins")
 require("whichkey")
 require("coc")
@@ -28,3 +26,6 @@ require("keybindings")
 require("neoterm")
 require("vim_test")
 require("gutentags")
+
+vim.cmd("colorscheme carbonfox")
+
