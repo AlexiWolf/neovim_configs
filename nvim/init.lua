@@ -25,6 +25,7 @@ require("keybindings")
 require("neoterm")
 require("vim_test")
 require("gutentags")
+require("lsp_configs")
 
 if os.getenv("COLORTERM") == "truecolor" then
     vim.cmd("colorscheme carbonfox")
