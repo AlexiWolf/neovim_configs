@@ -6,10 +6,10 @@ local goto_keymap = {
     name = "Goto",
 
     -- LSP Gotos
-    d = {"<Plug>(coc-definition)", "LSP symbol definition"},
-    D = {"<Plug>(coc-type-definition)", "LSP type definition"},
-    i = {"<Plug>(coc-implementation)", "LSP implementations"},
-    r = {"<Plug>(coc-references)", "LSP references"},
+    d = {"", "LSP symbol definition"},
+    D = {"", "LSP type definition"},
+    i = {"", "LSP implementations"},
+    r = {"", "LSP references"},
 
     -- Easymotion Gotos
     l = {"<Plug>(easymotion-overwin-line)", "Easymotion line"},
@@ -54,26 +54,6 @@ local terminal_keymap = {
 
 -- LSP Bindings
 
--- Using Vimscript because Lua bindings don't seem to work correctly.
-vim.cmd [[
-    " Use tab for trigger completion with characters ahead and navigate.
-    inoremap <silent><expr> <TAB>
-          \ coc#pum#visible() ? coc#pum#next(1):
-          \ CheckBackspace() ? "\<Tab>" :
-          \ coc#refresh()
-    inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-    " Make <CR> to accept selected completion item or notify coc.nvim to format
-    " <C-g>u breaks current undo, please make your own choice.
-    inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                                  \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-    function! CheckBackspace() abort
-      let col = col('.') - 1
-      return !col || getline('.')[col - 1]  =~# '\s'
-    endfunction
-]]
-
 -- Leader Keybindings
 vim.g.mapleader = " "
 local leader_keymap = {
@@ -87,11 +67,11 @@ local leader_keymap = {
     T = terminal_keymap,
 
     -- LSP Leader Bindings
-    r = {"<Plug>(coc-rename)", "Rename Symbol"},
-    a = {"<Plug>(coc-codeaction-selected)<cr>", "Apply code action to selection"},
-    A = {"<Plug>(coc-fix-current)", "Autofix problem on current line"},
-    c = {"<Plug>(coc-codelens-action)", "Run codelens action on selected line"},
-    k = {":lua=_G.show_docs()<cr>", "Show Documentation for selected symbol"},
+    r = {"", "Rename Symbol"},
+    a = {"", "Apply code action to selection"},
+    A = {"", "Autofix problem on current line"},
+    c = {"", "Run codelens action on selected line"},
+    k = {"", "Show Documentation for selected symbol"},
 }
 
 -- Register Keymaps

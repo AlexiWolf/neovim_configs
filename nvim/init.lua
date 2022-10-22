@@ -21,7 +21,6 @@ set.timeoutlen = 1000
 
 require("plugins")
 require("whichkey")
-require("coc")
 require("keybindings")
 require("neoterm")
 require("vim_test")
