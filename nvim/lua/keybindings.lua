@@ -5,12 +5,6 @@ local vimkeys = vim.keymap
 local goto_keymap = {
     name = "Goto",
 
-    -- LSP Gotos
-    d = {"", "LSP symbol definition"},
-    D = {"", "LSP type definition"},
-    i = {"", "LSP implementations"},
-    r = {"", "LSP references"},
-
     -- Easymotion Gotos
     l = {"<Plug>(easymotion-overwin-line)", "Easymotion line"},
     w = {"<Plug>(easymotion-overwin-w)", "Easymotion word"},
@@ -67,8 +61,7 @@ local leader_keymap = {
     T = terminal_keymap,
 
     -- LSP Leader Bindings
-    r = {"", "Rename Symbol"},
-    a = {"", "Apply code action to selection"},
+    a = {vim.lsp.buf.code_action, "Apply code action to selection"},
     A = {"", "Autofix problem on current line"},
     c = {"", "Run codelens action on selected line"},
     k = {"", "Show Documentation for selected symbol"},
