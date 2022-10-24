@@ -14,5 +14,6 @@ Plug("mfussenegger/nvim-dap")
 Plug("tpope/vim-fugitive")
 Plug("vim-test/vim-test")
 Plug("neovim/nvim-lspconfig")
+Plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
 
 vim.call("plug#end")
