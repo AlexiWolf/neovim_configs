@@ -1,5 +1,6 @@
 local lspconfig = require("lspconfig")
 local whichkey = require("which-key")
+local cmp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local common_lsp_keybinds = {
     K = {vim.lsp.buf.hover, "Show documentation"},
@@ -26,6 +27,7 @@ lspconfig.sumneko_lua.setup {
 }
 
 lspconfig.rust_analyzer.setup {
+    capabilities = cmp_capabilities,
     on_attach = register_common_lsp_keybindings,
     settings = {
         ["rust-analyzer"] = {
