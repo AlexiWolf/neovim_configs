@@ -27,5 +27,9 @@ require("neoterm")
 require("vim_test")
 require("gutentags")
 
-vim.cmd("colorscheme carbonfox")
+if os.getenv("COLORTERM") == "truecolor" then
+    vim.cmd("colorscheme carbonfox")
+else
+    vim.cmd("colorscheme morning")
+end
 
