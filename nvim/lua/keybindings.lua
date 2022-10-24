@@ -59,12 +59,6 @@ local leader_keymap = {
     g = git_keymap,
     t = test_runner_keymap,
     T = terminal_keymap,
-
-    -- LSP Leader Bindings
-    a = {vim.lsp.buf.code_action, "Apply code action to selection"},
-    A = {"", "Autofix problem on current line"},
-    c = {"", "Run codelens action on selected line"},
-    k = {"", "Show Documentation for selected symbol"},
 }
 
 -- Register Keymaps
