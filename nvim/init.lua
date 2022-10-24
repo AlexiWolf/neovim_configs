@@ -26,6 +26,7 @@ require("neoterm")
 require("vim_test")
 require("gutentags")
 require("lsp_configs")
+require("fzf_config")
 require("treesitter_config")
 
 if os.getenv("COLORTERM") == "truecolor" then
