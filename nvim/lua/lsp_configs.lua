@@ -11,7 +11,6 @@ local common_lsp_keybinds = {
     ["<leader>"] = {
         r = {vim.lsp.buf.rename, "Rename symbol"},
         a = {vim.lsp.buf.code_action, "Apply code action"},
-        
     },
 }
 
@@ -28,5 +27,18 @@ lspconfig.sumneko_lua.setup {
 
 lspconfig.rust_analyzer.setup {
     on_attach = register_common_lsp_keybindings,
+    settings = {
+        ["rust-analyzer"] = {
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+                features = "all"
+            },
+            procMacro = {
+                enable = true
+            }
+        }
+    }
 }
 
