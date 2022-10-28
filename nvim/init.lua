@@ -15,9 +15,9 @@ set.shiftwidth = 4
 set.expandtab = true
 
 set.wrap = false
-set.colorcolumn = {80}
+set.colorcolumn = {79, 99, 119}
 
-set.timeoutlen = 1000 
+set.timeoutlen = 1000
 
 require("plugins")
 require("whichkey")
