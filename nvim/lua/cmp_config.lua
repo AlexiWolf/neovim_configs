@@ -6,10 +6,16 @@ cmp.setup {
         -- documentation = cmp.config.window.bordered(),
     },
     mapping = {
-        ["<Tab>"] = cmp.select_next_item({behavior=cmp.SelectBehavior.Select }),
+        ["<Tab>"] = function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item({behavior=cmp.SelectBehavior.Select})
+            else
+               fallback()
+            end
+        end,
         ["<S-Tab>"] = cmp.mapping.select_prev_item({behavior=cmp.SelectBehavior.Select}),
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<CR>"] = cmp.mapping.confirm({ select = true })
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
     },
     sources = cmp.config.sources(
         {
