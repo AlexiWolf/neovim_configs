@@ -19,6 +19,9 @@ set.colorcolumn = {79, 99, 119}
 
 set.timeoutlen = 1000
 
+set.spell = true
+set.spelllang = { "en_us" }
+
 require("plugins")
 require("whichkey")
 require("keybindings")
