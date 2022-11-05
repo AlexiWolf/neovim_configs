@@ -11,6 +11,7 @@ cmp.setup {
         ["<S-Tab>"] = cmp.mapping.select_prev_item(),
         ["<C-j>"] = cmp.mapping.select_next_item(),
         ["<Tab>"] = cmp.mapping.select_next_item(),
+        ["<C-Space>"] = cmp.mapping.complete(),
     },
     sources = cmp.config.sources(
         {
