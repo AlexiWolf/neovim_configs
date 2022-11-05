@@ -13,6 +13,7 @@ cmp.setup {
         ["<C-j>"] = cmp.mapping.select_next_item(),
         ["<Tab>"] = cmp.mapping.select_next_item(),
         ["<C-Space>"] = cmp.mapping.complete(),
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
     },
     sources = cmp.config.sources(
         {
