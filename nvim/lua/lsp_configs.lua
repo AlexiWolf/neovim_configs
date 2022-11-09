@@ -44,3 +44,7 @@ lspconfig.rust_analyzer.setup {
     }
 }
 
+lspconfig.ccls.setup{
+    on_attach = register_common_lsp_keybindings,
+}
+
