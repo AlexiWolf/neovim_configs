@@ -38,6 +38,6 @@ require("cmp_config")
 if os.getenv("COLORTERM") == "truecolor" then
     vim.cmd("colorscheme carbonfox")
 else
-    vim.cmd("colorscheme morning")
+    vim.cmd("colorscheme slate")
 end
 
