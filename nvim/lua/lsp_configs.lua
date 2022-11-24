@@ -23,6 +23,7 @@ local register_common_lsp_keybindings = function()
 end
 
 lspconfig.sumneko_lua.setup {
+    capabilities = cmp_capabilities,
     on_attach = register_common_lsp_keybindings,
 }
 
@@ -45,6 +46,7 @@ lspconfig.rust_analyzer.setup {
 }
 
 lspconfig.ccls.setup{
+    capabilities = cmp_capabilities,
     on_attach = register_common_lsp_keybindings,
 }
 
