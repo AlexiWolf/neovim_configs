@@ -50,3 +50,8 @@ lspconfig.ccls.setup{
     on_attach = register_common_lsp_keybindings,
 }
 
+lspconfig.awk_ls.setup {
+    capabilities = cmp_capabilities,
+    on_attach = register_common_lsp_keybindings,
+}
+
