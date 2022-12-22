@@ -22,6 +22,7 @@ set.timeoutlen = 1000
 set.spell = true
 set.spelllang = { "en_us" }
 set.spelloptions = "camel"
+set.smartcase = true
 
 require("plugins")
 require("whichkey")
