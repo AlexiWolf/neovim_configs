@@ -36,7 +36,7 @@ require("luasnip_config")
 require("cmp_config")
 
 if os.getenv("COLORTERM") == "truecolor" then
-    vim.cmd("colorscheme carbonfox")
+    vim.cmd("colorscheme duskfox")
 else
     vim.cmd("colorscheme slate")
 end
