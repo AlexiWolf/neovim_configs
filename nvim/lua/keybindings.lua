@@ -25,6 +25,16 @@ local git_keymap = {
     p = {":G push <cr>", "Push"},
     P = {":G pull <cr>", "Pull"},
     f = {":G fetch<cr>", "Fetch"},
+    m = {
+        name = "Merge-tool",
+        s = {":MergetoolStart<cr>", "Start Merge-tool"},
+        S = {":MergetoolStop<cr>", "Stop Merge-tool"},
+        t = {":MergetoolToggle<cr>", "Toggle Merge-tool"},
+        h = {":MergetoolDiffExchangeLeft<cr>", "Exchange left"},
+        j = {":MergetoolDiffExchangeDown<cr>", "Exchange down"},
+        k = {":MergetoolDiffExchangeUp<cr>", "Exchange up"},
+        l = {":MergetoolDiffExchangeRight<cr>", "Exchange right"},
+    }
 }
 
 -- Test Runner Keybindings
