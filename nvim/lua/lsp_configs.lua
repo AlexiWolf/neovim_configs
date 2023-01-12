@@ -55,3 +55,8 @@ lspconfig.awk_ls.setup {
     on_attach = register_common_lsp_keybindings,
 }
 
+lspconfig.jdtls.setup {
+    capabilities = cmp_capabilities,
+    on_attach = register_common_lsp_keybindings,
+}
+
