@@ -60,3 +60,7 @@ lspconfig.jdtls.setup {
     on_attach = register_common_lsp_keybindings,
 }
 
+lspconfig.pyright.setup {
+    capabilities = cmp_capabilities,
+    on_attach = register_common_lsp_keybindings,
+}
