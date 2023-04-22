@@ -65,6 +65,11 @@ lspconfig.pyright.setup {
     on_attach = register_common_lsp_keybindings,
 }
 
+lspconfig.html.setup {
+    capabilities = cmp_capabilities,
+    on_attach = register_common_lsp_keybindings,
+}
+
 lspconfig.marksman.setup {
     capabilities = cmp_capabilities,
     on_attach = register_common_lsp_keybindings,
