@@ -22,7 +22,7 @@ local register_common_lsp_keybindings = function()
     )
 end
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
     capabilities = cmp_capabilities,
     on_attach = register_common_lsp_keybindings,
 }
