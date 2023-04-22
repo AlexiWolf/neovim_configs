@@ -70,7 +70,7 @@ lspconfig.html.setup {
     on_attach = register_common_lsp_keybindings,
 }
 
-lspconfig.css.setup {
+lspconfig.cssls.setup {
     capabilities = cmp_capabilities,
     on_attach = register_common_lsp_keybindings,
 }
