@@ -70,6 +70,11 @@ lspconfig.html.setup {
     on_attach = register_common_lsp_keybindings,
 }
 
+lspconfig.css.setup {
+    capabilities = cmp_capabilities,
+    on_attach = register_common_lsp_keybindings,
+}
+
 lspconfig.marksman.setup {
     capabilities = cmp_capabilities,
     on_attach = register_common_lsp_keybindings,
