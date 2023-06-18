@@ -82,3 +82,8 @@ lspconfig.marksman.setup {
         filetypes = { "markdown", "md" }
     }
 }
+
+lspconfig.wgsl_analyzer.setup {
+    capabilities = cmp_capabilities,
+    on_attach = register_common_lsp_keybindings,
+}
