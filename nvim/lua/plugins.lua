@@ -26,5 +26,6 @@ Plug("hrsh7th/cmp-path")
 Plug("hrsh7th/cmp-cmdline")
 Plug("L3MON4D3/LuaSnip")
 Plug("rafamadriz/friendly-snippets")
+Plug("williamboman/mason.nvim")
 
 vim.call("plug#end")

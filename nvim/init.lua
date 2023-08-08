@@ -35,5 +35,6 @@ require("fzf_config")
 require("treesitter_config")
 require("luasnip_config")
 require("cmp_config")
+require("mason_config")
 
 vim.cmd("colorscheme duskfox")

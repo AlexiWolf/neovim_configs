@@ -56,6 +56,16 @@ local terminal_keymap = {
     C = {":TcloseAll<cr>", "Close all terminals"},
 }
 
+--Mason Keybindings
+local mason_keymap = {
+    name = "Mason",
+    o = {":Mason<cr>", "Open the Mason window"},
+    U = {":MasonUpdate<cr>", "Update all managed registries"},
+    i = {":MasonInstall ", "Install / re-install the provided packages"},
+    u = {":MasonUninstall ", "Uninstall the provided packages"},
+    l = {":MasonLogs<cr> ", "Open the Mason log file in a new window"},
+}
+
 -- LSP Bindings
 
 -- Leader Keybindings
@@ -69,6 +79,7 @@ local leader_keymap = {
     g = git_keymap,
     t = test_runner_keymap,
     T = terminal_keymap,
+    M = mason_keymap,
 }
 
 -- Register Keymaps
