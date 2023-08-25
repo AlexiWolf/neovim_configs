@@ -25,3 +25,5 @@ set.spelloptions = "camel"
 set.smartcase = true
 
 vim.g.mapleader = " "
+
+vim.cmd("colorscheme duskfox")
