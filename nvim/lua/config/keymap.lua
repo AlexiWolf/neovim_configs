@@ -15,6 +15,10 @@ local keymap = {
             P = {":G pull <cr>", "Pull"},
             f = {":G fetch<cr>", "Fetch"},
         },
+        f = {":Files<cr>", "Open file picker"},
+        s = {":BTags<cr>", "Open symbol picker for the current buffer"},
+        S = {":Tags<cr>", "Open symbol picker for the work-space"},
+
     },
 
     ["<c-k>"] = {":wincmd k<cr>", "Go to the up window"},
