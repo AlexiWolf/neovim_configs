@@ -23,3 +23,5 @@ set.spell = true
 set.spelllang = { "en_us" }
 set.spelloptions = "camel"
 set.smartcase = true
+
+vim.g.mapleader = " "
