@@ -23,17 +23,3 @@ set.spell = true
 set.spelllang = { "en_us" }
 set.spelloptions = "camel"
 set.smartcase = true
-
-require("plugins")
-require("whichkey")
-require("keybindings")
-require("neoterm")
-require("vim_test")
-require("gutentags")
-require("lsp_configs")
-require("fzf_config")
-require("treesitter_config")
-require("luasnip_config")
-require("cmp_config")
-
-vim.cmd("colorscheme duskfox")
