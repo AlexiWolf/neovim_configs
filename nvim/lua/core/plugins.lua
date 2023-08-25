@@ -5,5 +5,6 @@ vim.call("plug#begin")
     Plug("folke/which-key.nvim")
     Plug("EdenEast/nightfox.nvim")
     Plug("williamboman/mason.nvim")
+    Plug("junegunn/fzf.vim")
 vim.call("plug#end")
 
