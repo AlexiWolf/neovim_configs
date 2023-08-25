@@ -16,6 +16,7 @@ local keymap = {
             f = {":G fetch<cr>", "Fetch"},
         },
     },
+
     ["<c-k>"] = {":wincmd k<cr>", "Go to the up window"},
     ["<c-j>"] = {":wincmd j<cr>", "Go to the down window"},
     ["<c-h>"] = {":wincmd h<cr>", "Go to the left window"},
