@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
 local mason_lspconfig = require("mason-lspconfig")
 
 local LSP_CONFIGS = require("config.lsp")
