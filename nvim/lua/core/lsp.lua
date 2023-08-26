@@ -12,10 +12,12 @@ local function get_lsp_config_or_default(lsp_configs, server_name)
     end
 end
 
-mason_lspconfig.setup_handlers({
-    function(server_name)
+local function default_setup_handler(server_name)
         local lsp = lspconfig[server_name]
         local config = get_lsp_config_or_default(LSP_CONFIGS, server_name)
         lsp.setup(config)
-    end,
+end
+
+mason_lspconfig.setup_handlers({
+    default_setup_handler,
 })
