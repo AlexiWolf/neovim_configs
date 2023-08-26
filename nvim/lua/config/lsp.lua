@@ -7,12 +7,14 @@ local function register_common_lsp_keymap()
     which_key.register(keymap["lsp_common"])
 end
 
+local default_config = {
+    capabilities = cmp_capabilities,
+}
+
 local config = {
-    default = {
-        capabilities = cmp_capabilities,
-    },
+    default = default_config,
     ["rust_analyzer"] = {
-        capabilities = cmp_capabilities,
+        capabilities = default_config.capabilities,
         on_attach = register_common_lsp_keymap,
         settings = {
             ["rust_analyzer"] = {
