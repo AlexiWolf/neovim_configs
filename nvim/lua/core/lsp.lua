@@ -1,7 +1,7 @@
 local lspconfig = require('lspconfig')
 local mason_lspconfig = require("mason-lspconfig")
 
-local LSP_CONFIGS = {}
+local LSP_CONFIGS = require("config.lsp")
 
 local function get_lsp_config_or_default(lsp_configs, server_name)
     local config = lsp_configs[server_name]
