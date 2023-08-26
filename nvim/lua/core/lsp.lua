@@ -14,6 +14,7 @@ end
 
 mason_lspconfig.setup_handlers({
     function(server_name)
-        lspconfig[server_name].setup(get_lsp_config_or_default(LSP_CONFIGS, server_name))
+        local config = get_lsp_config_or_default(LSP_CONFIGS, server_name)
+        lspconfig[server_name].setup(config)
     end,
 })
