@@ -17,5 +17,6 @@ vim.call("plug#begin")
     Plug("hrsh7th/cmp-path")
     Plug("hrsh7th/cmp-cmdline")
     Plug("L3MON4D3/LuaSnip")
+    Plug("vim-airline/vim-airline")
 vim.call("plug#end")
 
