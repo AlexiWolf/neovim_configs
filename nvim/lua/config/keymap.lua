@@ -20,7 +20,14 @@ local keymap = {
         f = {":Files<cr>", "Open file picker"},
         s = {":BTags<cr>", "Open symbol picker for the current buffer"},
         S = {":Tags<cr>", "Open symbol picker for the work-space"},
+    },
+    g = {
+        name = "Goto",
 
+        l = {"<Plug>(easymotion-overwin-line)", "Easymotion line"},
+        w = {"<Plug>(easymotion-overwin-w)", "Easymotion word"},
+        c = {"<Plug>(easymotion-overwin-f)", "Easymotion character"},
+        C = {"<Plug>(easymotion-overwin-f2)", "Easymotion 2-character"},
     },
 
     ["<c-k>"] = {":wincmd k<cr>", "Go to the up window"},
