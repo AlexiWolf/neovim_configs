@@ -6,9 +6,9 @@ local LSP_CONFIGS = require("config.lsp")
 local function get_lsp_config_or_default(lsp_configs, server_name)
     local config = lsp_configs[server_name]
     if config == nil then
-        return config
-    else
         return lsp_configs["default"]
+    else
+        return config
     end
 end
 
