@@ -1,3 +1,5 @@
+local cmp = require("cmp")
+
 local keymap = {
     ["<leader>"] = {
         name = "Leader Actions",
@@ -40,9 +42,20 @@ local lsp_keymap = {
     },
 }
 
+local cmp_keymap = {
+        ["<C-k>"] = cmp.mapping.select_prev_item(),
+        ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+        ["<C-j>"] = cmp.mapping.select_next_item(),
+        ["<Tab>"] = cmp.mapping.select_next_item(),
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+
+}
+
 local keymaps = {
     ["common"] = keymap,
     ["lsp_common"] = lsp_keymap,
+    ["cmp"] = cmp_keymap,
 }
 
 return keymaps

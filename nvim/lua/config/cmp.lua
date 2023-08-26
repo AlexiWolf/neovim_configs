@@ -1,4 +1,8 @@
+local cmp = require("cmp")
+local keymap = require("config.keymap")
+
 local config = {
+    mapping = keymap["cmp"],
     sources = cmp.config.sources(
         {
             { name = "nvim_lsp" },
@@ -10,4 +14,4 @@ local config = {
     ),
 }
 
-return config
+return config 
