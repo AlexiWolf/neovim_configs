@@ -9,6 +9,7 @@ end
 
 local default_config = {
     capabilities = cmp_capabilities,
+    on_attach = register_common_lsp_keymap,
 }
 
 local config = {
