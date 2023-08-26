@@ -1,6 +1,6 @@
 local keymap = {
     ["<leader>"] = {
-        name = "Leader Actions",   
+        name = "Leader Actions",
 
         g = {
             name = "Git",
