@@ -1,4 +1,5 @@
 local config = {
+    default = {},
     ["rust_analyzer"] = {
         cargo = {
             buildScripts = {
@@ -8,8 +9,8 @@ local config = {
         },
         procMacro = {
             enable = true
-        }
-    }
+        },
+    },
 }
 
 return config
