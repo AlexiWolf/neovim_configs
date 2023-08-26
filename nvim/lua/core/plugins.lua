@@ -19,5 +19,6 @@ vim.call("plug#begin")
     Plug("L3MON4D3/LuaSnip")
     Plug("vim-airline/vim-airline")
     Plug("gpanders/editorconfig.nvim")
+    Plug("easymotion/vim-easymotion")
 vim.call("plug#end")
 
