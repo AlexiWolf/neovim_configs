@@ -7,5 +7,6 @@ vim.call("plug#begin")
     Plug("williamboman/mason.nvim")
     Plug("junegunn/fzf.vim")
     Plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
+    Plug("ludovicchabant/vim-gutentags")
 vim.call("plug#end")
 
