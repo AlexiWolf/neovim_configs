@@ -18,5 +18,6 @@ vim.call("plug#begin")
     Plug("hrsh7th/cmp-cmdline")
     Plug("L3MON4D3/LuaSnip")
     Plug("vim-airline/vim-airline")
+    Plug("gpanders/editorconfig.nvim")
 vim.call("plug#end")
 
