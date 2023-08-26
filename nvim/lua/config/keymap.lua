@@ -27,4 +27,22 @@ local keymap = {
     ["<c-l>"] = {":wincmd l<cr>", "Go to the right window"},
 }
 
-return keymap
+local lsp_keymap = {
+    K = {vim.lsp.buf.hover, "Show documentation"},
+    g = {
+        d = {vim.lsp.buf.definition, "LSP symbol definition"},
+        i = {vim.lsp.buf.implementation, "LSP implementations"},
+        r = {vim.lsp.buf.references, "LSP references"},
+    },
+    ["<leader>"] = {
+        r = {vim.lsp.buf.rename, "Rename symbol"},
+        a = {vim.lsp.buf.code_action, "Apply code action"},
+    },
+}
+
+local keymaps = {
+    ["common"] = keymap,
+    ["lsp_common"] = lsp_keymap,
+}
+
+return keymaps
