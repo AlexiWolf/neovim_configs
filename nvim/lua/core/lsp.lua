@@ -3,12 +3,12 @@ local mason_lspconfig = require("mason-lspconfig")
 
 local LSP_CONFIGS = {}
 
-local function get_lsp_config_or_default(lsp_settings, server_name)
-    local config = lsp_settings[server_name]
+local function get_lsp_config_or_default(lsp_configs, server_name)
+    local config = lsp_configs[server_name]
     if config == nil then
         return config
     else
-        return lsp_settings["default"]
+        return lsp_configs["default"]
     end
 end
 
