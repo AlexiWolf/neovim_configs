@@ -3,9 +3,8 @@ local cmp = require("cmp")
 local keymap = {
     ["<leader>"] = {
         name = "Leader Actions",
-
         g = {
-            name = "Git",
+            name = "Git Actions",
             s = {":G status<cr>", "View status"},
             d = {":G diff<cr>", "View diff"},
             l = {":Commits<cr>", "View commit log"},
@@ -21,9 +20,9 @@ local keymap = {
         s = {":BTags<cr>", "Open symbol picker for the current buffer"},
         S = {":Tags<cr>", "Open symbol picker for the work-space"},
     },
-    g = {
-        name = "Goto",
 
+    g = {
+        name = "Goto Actions",
         l = {"<Plug>(easymotion-overwin-line)", "Easymotion line"},
         w = {"<Plug>(easymotion-overwin-w)", "Easymotion word"},
         c = {"<Plug>(easymotion-overwin-f)", "Easymotion character"},
