@@ -43,13 +43,12 @@ local lsp_keymap = {
 }
 
 local cmp_keymap = {
-        ["<C-k>"] = cmp.mapping.select_prev_item(),
-        ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-        ["<C-j>"] = cmp.mapping.select_next_item(),
-        ["<Tab>"] = cmp.mapping.select_next_item(),
-        ["<C-Space>"] = cmp.mapping.complete(),
-        ["<CR>"] = cmp.mapping.confirm({ select = false }),
-
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<Tab>"] = cmp.mapping.select_next_item(),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),
 }
 
 local keymaps = {
