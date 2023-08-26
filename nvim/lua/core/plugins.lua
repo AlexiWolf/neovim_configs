@@ -10,5 +10,6 @@ vim.call("plug#begin")
     Plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
     Plug("ludovicchabant/vim-gutentags")
     Plug("neovim/nvim-lspconfig")
+    Plug("j-hui/fidget.nvim", { ["tag"] = "legacy" })
 vim.call("plug#end")
 
