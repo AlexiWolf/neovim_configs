@@ -21,5 +21,6 @@ vim.call("plug#begin")
     Plug("vim-airline/vim-airline")
     Plug("gpanders/editorconfig.nvim")
     Plug("easymotion/vim-easymotion")
+    Plug("kassio/neoterm")
 vim.call("plug#end")
 
