@@ -7,6 +7,14 @@ local function default_setup_handler(server_name)
     lsp.setup(config)
 end
 
+local function rust_setup_handler()
+    local rust_tools = require("rust-tools")
+    rust_tools.setup()
+    rust_tools.inlay_hints.set()
+    rust_tools.runnables.runnables()
+    rust_tools.hover_actions.hover_actions()
+end
+
 local config = {
     lsp_config = {
         ensure_installed = {
@@ -16,6 +24,7 @@ local config = {
         automatic_installation = true,
         handlers = {
             default_setup_handler,
+            ["rust_analyzer"] = rust_setup_handler,
         },
     }
 }

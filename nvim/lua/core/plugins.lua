@@ -22,5 +22,6 @@ vim.call("plug#begin")
     Plug("gpanders/editorconfig.nvim")
     Plug("easymotion/vim-easymotion")
     Plug("kassio/neoterm")
+    Plug("simrat39/rust-tools.nvim")
 vim.call("plug#end")
 
