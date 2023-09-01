@@ -4,7 +4,7 @@ local lsp_configs = require("config.lsp")
 
 local function default_setup_handler(server_name)
     local lsp = lspconfig[server_name]
-    local config = lsp_configs.get_normalized_lsp_config(server_name)
+    local config = lsp_configs.get_server_config(server_name)
     lsp.setup(config)
 end
 

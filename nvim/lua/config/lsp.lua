@@ -34,10 +34,10 @@ local configs = {
     },
 }
 
-local function get_normalized_lsp_config(server_name)
+local function get_server_config(server_name)
     return vim.tbl_deep_extend("force", {}, defaults, configs[server_name] or {})
 end
 
 return {
-    get_normalized_lsp_config = get_normalized_lsp_config,
+    get_server_config = get_server_config,
 }
