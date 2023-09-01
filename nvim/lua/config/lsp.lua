@@ -35,7 +35,7 @@ local LSP_CONFIGS = {
 }
 
 local function get_normalized_lsp_config(server_name)
-    return vim.tbl_deep_extend("force", default, LSP_CONFIGS[server_name] or {})
+    return vim.tbl_deep_extend("force", {}, default, LSP_CONFIGS[server_name] or {})
 end
 
 return {
