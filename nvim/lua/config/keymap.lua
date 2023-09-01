@@ -1,4 +1,5 @@
 local cmp = require("cmp")
+local dap = require("dap")
 
 local keymap = {
     ["<leader>"] = {
@@ -35,6 +36,7 @@ local keymap = {
     ["<c-l>"] = {":wincmd l<cr>", "Go to the right window"},
 }
 
+
 local lsp_keymap = {
     K = {vim.lsp.buf.hover, "Show documentation"},
     g = {
@@ -45,6 +47,14 @@ local lsp_keymap = {
     ["<leader>"] = {
         r = {vim.lsp.buf.rename, "Rename symbol"},
         a = {vim.lsp.buf.code_action, "Apply code action"},
+        d = {
+            name = "Debugger Actions",
+            t = {dap.toggle_breakpoint(), "Toggle breakpoint"},
+            c = {dap.continue(), "Continue to next breakpoint"},
+            o = {dap.step_over(), "Step over the current line"},
+            i = {dap.step_into(), "Step into the current line"},
+            r = {dap.repl.open(), "Open the interactive REPL"},
+        }
     },
 }
 
