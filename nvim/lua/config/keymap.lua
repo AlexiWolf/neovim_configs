@@ -59,7 +59,7 @@ local rust_analzyer_keymap = {
     ["<leader>"] = {
         d = {
             R = {":RustDebuggables<cr>", "Start debuggable target"},
-        }
+        },
     },
 }
 
