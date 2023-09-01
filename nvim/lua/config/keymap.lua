@@ -58,6 +58,14 @@ local lsp_keymap = {
     },
 }
 
+local rust_analzyer_keymap = {
+    ["<leader>"] = {
+        d = {
+            R = {":RustDebuggables<cr>", "Start debuggable target"},
+        }
+    },
+}
+
 local cmp_keymap = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<S-Tab>"] = cmp.mapping.select_prev_item(),
@@ -70,6 +78,7 @@ local cmp_keymap = {
 local keymaps = {
     ["common"] = keymap,
     ["lsp_common"] = lsp_keymap,
+    ["lsp_rust_analyzer"] = rust_analzyer_keymap,
     ["cmp"] = cmp_keymap,
 }
 
