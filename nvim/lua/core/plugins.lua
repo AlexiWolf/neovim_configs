@@ -23,5 +23,6 @@ vim.call("plug#begin")
     Plug("easymotion/vim-easymotion")
     Plug("kassio/neoterm")
     Plug("simrat39/rust-tools.nvim")
+    Plug("mfussenegger/nvim-dap")
 vim.call("plug#end")
 
