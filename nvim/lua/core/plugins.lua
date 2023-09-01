@@ -25,5 +25,6 @@ vim.call("plug#begin")
     Plug("simrat39/rust-tools.nvim")
     Plug("mfussenegger/nvim-dap")
     Plug("rcarriga/nvim-dap-ui")
+    Plug("nvim-lua/plenary.nvim")
 vim.call("plug#end")
 
