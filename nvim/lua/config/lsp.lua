@@ -13,11 +13,11 @@ local LSP_CONFIGS = {
         on_attach = register_common_lsp_keymap,
     },
     ["rust_analyzer"] = {
+        on_attach = function ()
+            register_common_lsp_keymap()
+            which_key.regsiter(keymap["lsp_rust_analyzer"])
+        end,
         settings = {
-            on_attach = function ()
-                register_common_lsp_keymap()
-                which_key.regsiter(keymap["lsp_rust_analyzer"])
-            end,
             ["rust_analyzer"] = {
                 cargo = {
                     buildScripts = {

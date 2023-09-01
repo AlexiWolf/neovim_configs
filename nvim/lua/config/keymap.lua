@@ -1,7 +1,4 @@
-local cmp = require("cmp")
-local dap = require("dap")
-
-local keymap = {
+local cmp = require("cmp") local dap = require("dap") local keymap = {
     ["<leader>"] = {
         name = "Leader Actions",
         g = {
