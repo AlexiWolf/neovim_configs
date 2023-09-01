@@ -7,12 +7,12 @@ local function register_common_lsp_keymap()
     which_key.register(keymap["lsp_common"])
 end
 
-local default = {
+local defaults = {
     capabilities = cmp_capabilities,
     on_attach = register_common_lsp_keymap,
 }
 
-local LSP_CONFIGS = {
+local configs = {
     ["rust_analyzer"] = {
         on_attach = function ()
             register_common_lsp_keymap()
@@ -35,10 +35,9 @@ local LSP_CONFIGS = {
 }
 
 local function get_normalized_lsp_config(server_name)
-    return vim.tbl_deep_extend("force", {}, default, LSP_CONFIGS[server_name] or {})
+    return vim.tbl_deep_extend("force", {}, defaults, configs[server_name] or {})
 end
 
 return {
-    LSP_CONFIGS = LSP_CONFIGS,
     get_normalized_lsp_config = get_normalized_lsp_config,
 }
