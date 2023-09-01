@@ -14,9 +14,9 @@ local defaults = {
 
 local configs = {
     ["rust_analyzer"] = {
-        on_attach = function ()
+        on_attach = function()
             register_common_lsp_keymap()
-            which_key.regsiter(keymap["lsp_rust_analyzer"])
+            which_key.register(keymap["lsp_rust_analyzer"])
         end,
         settings = {
             ["rust_analyzer"] = {
