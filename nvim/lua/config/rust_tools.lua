@@ -8,10 +8,11 @@ local codelldb_path = codelldb_install_path .. "adapter/codelldb"
 local liblldb_path = codelldb_install_path .. "lldb/lib/liblldb.so"
 
 local config = {
+    tools = {},
     server = lsp_configs.get_normalized_lsp_config("rust_analyzer"),
     dap = {
         adapter = rust_tools_dap.get_codelldb_adapter(codelldb_path, liblldb_path),
-    }
+    },
 }
 
 return config
