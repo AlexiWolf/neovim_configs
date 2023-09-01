@@ -49,11 +49,11 @@ local lsp_keymap = {
         a = {vim.lsp.buf.code_action, "Apply code action"},
         d = {
             name = "Debugger Actions",
-            t = {dap.toggle_breakpoint(), "Toggle breakpoint"},
-            c = {dap.continue(), "Continue to next breakpoint"},
-            o = {dap.step_over(), "Step over the current line"},
-            i = {dap.step_into(), "Step into the current line"},
-            r = {dap.repl.open(), "Open the interactive REPL"},
+            t = {dap.toggle_breakpoint, "Toggle breakpoint"},
+            c = {dap.continue, "Continue to next breakpoint"},
+            o = {dap.step_over, "Step over the current line"},
+            i = {dap.step_into, "Step into the current line"},
+            r = {dap.repl.open, "Open the interactive REPL"},
         }
     },
 }
