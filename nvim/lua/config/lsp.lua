@@ -19,7 +19,7 @@ local configs = {
             which_key.register(keymap["lsp_rust_analyzer"])
         end,
         settings = {
-            ["rust_analyzer"] = {
+            ["rust-analyzer"] = { -- Use the '-' here, not '_'.
                 cargo = {
                     buildScripts = {
                         enable = true,
